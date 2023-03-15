@@ -5,10 +5,7 @@ import { User } from '../user/user.model';
 import { Right } from '../right/right.model';
 import { RoleCount } from './role-count.output';
 
-/**
- * @trxn/user
- */
-@ObjectType({description:'@trxn/user'})
+@ObjectType()
 export class Role {
 
     @Field(() => ID, {nullable:false})

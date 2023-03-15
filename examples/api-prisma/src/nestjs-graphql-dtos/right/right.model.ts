@@ -4,10 +4,7 @@ import { ID } from '@nestjs/graphql';
 import { Role } from '../role/role.model';
 import { RightCount } from './right-count.output';
 
-/**
- * @trxn/user: false
- */
-@ObjectType({description:'@trxn/user: false'})
+@ObjectType()
 export class Right {
 
     @Field(() => ID, {nullable:false})
