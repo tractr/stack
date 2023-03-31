@@ -51,7 +51,6 @@
       "{workspaceRoot}/hapify-models.json",
       "{workspaceRoot}/nx.json",
       "{workspaceRoot}/tsconfig.base.json",
-      "{workspaceRoot}/workspace.json",
       "{workspaceRoot}/babel.config.json"
     ]
   },
