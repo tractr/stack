@@ -44,7 +44,7 @@ jobs:
         node: [16.x]
         os: [ubuntu-20.04]
 
-    runs-on: ['${{ matrix.os }}']
+    runs-on: '${{ matrix.os }}'
 
     outputs:
       apps: ${{ steps.apps.outputs.result }}

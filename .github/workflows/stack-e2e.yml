@@ -17,7 +17,7 @@ jobs:
         node: [16.x]
         os: [ubuntu-20.04]
 
-    runs-on: ['${{ matrix.os }}']
+    runs-on: '${{ matrix.os }}'
 
     # Service containers to run with `container-job`
     services:
