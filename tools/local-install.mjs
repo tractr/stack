@@ -37,10 +37,10 @@ const projectsWanted = projectsWithComma
   .map((p) => p.trim())
   .filter((p) => p !== '');
 
-const traxionDir = join(__dirname, '..');
-const traxionTree = new FsTree(traxionDir);
+const stackDir = join(__dirname, '..');
+const stackTree = new FsTree(stackDir);
 
-const projects = getProjects(traxionTree);
+const projects = getProjects(stackTree);
 
 const packagesToInstall = [];
 const toCopy = [];
@@ -65,13 +65,11 @@ for (const [projectName, project] of projects) {
     project.targets.build.options.outputPath || project.targets.build.outputs[0]
   ).replace('{workspaceRoot}', '');
 
-  const packageJson = readJsonFile(
-    join(traxionDir, outputPath, 'package.json'),
-  );
+  const packageJson = readJsonFile(join(stackDir, outputPath, 'package.json'));
   const packageName = packageJson.name;
 
   toCopy.push([
-    join(traxionDir, outputPath),
+    join(stackDir, outputPath),
     join(targetDir, packageName),
     packageJson,
   ]);

@@ -1,10 +1,10 @@
 {
-  "name": "traxion",
+  "name": "stack",
   "version": "1.33.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/tractr/traxion"
+    "url": "https://github.com/tractr/stack"
   },
   "license": "MIT",
   "scripts": {

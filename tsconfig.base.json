@@ -28,8 +28,8 @@
       "@trxn/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@trxn/client-config": ["libs/config/client/src/index.ts"],
       "@trxn/commit-config": ["libs/config/commit/src/index.ts"],
-      "@trxn/create-traxion-workspace": [
-        "libs/hapify/create-traxion-workspace/src/index.ts"
+      "@trxn/create-stack-workspace": [
+        "libs/hapify/create-stack-workspace/src/index.ts"
       ],
       "@trxn/eslint-config": ["libs/config/eslint/src/index.ts"],
       "@trxn/generated-angular-rext-client": [
