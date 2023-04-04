@@ -24,6 +24,11 @@ export class DemoComponent {
   async login({ email, password }: LoginCredentials) {
     try {
       await this.sessionService.login(email, password);
+
+      this.notifier.messages$.next({
+        message: 'You are now logged in',
+        level: 'success',
+      });
     } catch (error: unknown) {
       if (error instanceof Error) this.notifier.errors$.next({ error });
       else throw error;

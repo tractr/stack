@@ -111,7 +111,7 @@ export class SessionService<
     };
 
     try {
-      await fetch(this.options.api.getEndpoint('logout'), {
+      await fetch(this.options.api.getEndpoint('login'), {
         method: 'POST',
         credentials: 'include',
         headers: {
