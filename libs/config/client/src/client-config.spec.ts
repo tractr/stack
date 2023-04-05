@@ -37,9 +37,7 @@ describe('fetchConfiguration', () => {
 
     const config = await fetchConfiguration(options);
 
-    expect(window.sessionStorage.getItem(key)).toEqual(
-      JSON.stringify(previousData),
-    );
+    expect(window.sessionStorage.getItem(key)).toEqual(JSON.stringify(data));
     expect(JSON.stringify(config)).toEqual(JSON.stringify(data));
   });
 
