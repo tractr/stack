@@ -4,6 +4,7 @@ import {
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
+import { map } from 'rxjs';
 
 import { AUTHENTICATION_OPTIONS } from '../constants';
 import { SessionService } from '../services';
@@ -14,15 +15,18 @@ export function isLoggedGuard() {
     const router = inject(Router);
     const sessionService = inject(SessionService);
     const options = inject<AuthenticationModuleOptions>(AUTHENTICATION_OPTIONS);
-    const logged = sessionService.isLogged();
 
-    if (logged) {
-      sessionService.setPathAfterLogin(null);
-      return true;
-    }
+    return sessionService.me$.pipe(
+      map((user) => {
+        if (user) {
+          sessionService.setPathAfterLogin(null);
+          return true;
+        }
 
-    sessionService.setPathAfterLogin(state);
+        sessionService.setPathAfterLogin(state);
 
-    return router.createUrlTree([options.redirect.login]);
+        return router.createUrlTree([options.redirect.login]);
+      }),
+    );
   };
 }

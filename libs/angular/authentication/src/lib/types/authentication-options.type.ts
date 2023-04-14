@@ -30,6 +30,7 @@ export type AuthenticationModuleOptions = {
 
   redirect: {
     login: string;
+    notLogged: string;
   };
 
   initOnPageLoad: boolean;
@@ -58,6 +59,7 @@ export type AuthenticationOptions = {
 
   redirect?: {
     login?: string;
+    notLogged?: string;
   };
 
   initOnPageLoad?: boolean;
