@@ -1,5 +1,6 @@
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { map } from 'rxjs';
 
 import { AUTHENTICATION_OPTIONS } from '../constants';
 import { SessionService } from '../services';
@@ -10,12 +11,15 @@ export function isNotLoggedGuard() {
     const router = inject(Router);
     const sessionService = inject(SessionService);
     const options = inject<AuthenticationModuleOptions>(AUTHENTICATION_OPTIONS);
-    const logged = sessionService.isLogged();
 
-    if (logged) {
-      return router.createUrlTree([options.redirect.login]);
-    }
+    return sessionService.me$.pipe(
+      map((user) => {
+        if (user) {
+          return router.createUrlTree([options.redirect.notLogged]);
+        }
 
-    return true;
+        return true;
+      }),
+    );
   };
 }
