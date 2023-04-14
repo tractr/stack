@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.2.0-next.1](https://github.com/tractr/stack/compare/v2.2.0-next.0...v2.2.0-next.1) (2023-04-14)
+
+
+### Bug Fixes
+
+* use observable inside angular guard to be sure to wait the user initialisation ([d2dc028](https://github.com/tractr/stack/commit/d2dc028bf12ad97221e031709edc52522dad2c4b))
+
+
+
 # [2.2.0-next.0](https://github.com/tractr/stack/compare/v2.0.14-next.0...v2.2.0-next.0) (2023-04-05)
 
 
