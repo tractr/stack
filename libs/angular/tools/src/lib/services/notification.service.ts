@@ -17,8 +17,59 @@ export class NotificationService extends Unsubscribe {
 
   constructor() {
     super();
-
     this.onInit();
+  }
+
+  /**
+   * Send a message to the message stream.
+   * @param message
+   * @param level - The level of the message. Defaults to `info`.
+   */
+  message(message: string, level: 'success' | 'info' | 'warning' = 'info') {
+    this.messages$.next({ level, message });
+  }
+
+  /**
+   * @deprecated Use `error` instead.
+   */
+  handle(err: string | Error) {
+    this.error(err);
+  }
+
+  /**
+   * Send an error to the error stream.
+   * @param err
+   */
+  error(err: string | Error) {
+    if (typeof err === 'string') {
+      this.errors$.next({ error: err });
+    } else {
+      this.errors$.next({ error: err.message, stack: err.stack });
+    }
+  }
+
+  /**
+   * Send an info message to the message stream.
+   * @param message
+   */
+  info(message: string) {
+    this.message(message, 'info');
+  }
+
+  /**
+   * Send a success message to the message stream.
+   * @param message
+   */
+  success(message: string) {
+    this.message(message, 'success');
+  }
+
+  /**
+   * Send a warning message to the message stream.
+   * @param message
+   */
+  warning(message: string) {
+    this.message(message, 'warning');
   }
 
   onInit() {
