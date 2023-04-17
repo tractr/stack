@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.2.0-next.2](https://github.com/tractr/stack/compare/v2.2.0-next.1...v2.2.0-next.2) (2023-04-17)
+
+
+### Features
+
+* add helper to the notification service ([d1ecf9a](https://github.com/tractr/stack/commit/d1ecf9abc3746352c5045705ab2ef896ea3fb5e0))
+
+
+
 # [2.2.0-next.1](https://github.com/tractr/stack/compare/v2.2.0-next.0...v2.2.0-next.1) (2023-04-14)
 
 
