@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.2.0-next.3](https://github.com/tractr/stack/compare/v2.2.0-next.2...v2.2.0-next.3) (2023-04-18)
+
+
+### Bug Fixes
+
+* do not notify when we test if the user is logged or not ([5ee2b79](https://github.com/tractr/stack/commit/5ee2b79cd62b8e4fb7deeb6c741544621aa9074a))
+
+
+
 # [2.2.0-next.2](https://github.com/tractr/stack/compare/v2.2.0-next.1...v2.2.0-next.2) (2023-04-17)
 
 
