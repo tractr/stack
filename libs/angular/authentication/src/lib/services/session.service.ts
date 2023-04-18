@@ -20,7 +20,7 @@ import {
 import { AUTHENTICATION_OPTIONS } from '../constants';
 import { AuthenticationModuleOptions } from '../types';
 
-import { NotificationService, Unsubscribe } from '@trxn/angular-tools';
+import { Unsubscribe } from '@trxn/angular-tools';
 
 @Injectable({
   providedIn: 'root',
@@ -50,7 +50,6 @@ export class SessionService<
   constructor(
     @Inject(AUTHENTICATION_OPTIONS)
     private readonly options: AuthenticationModuleOptions,
-    private readonly notifier: NotificationService,
   ) {
     super();
 
@@ -83,10 +82,7 @@ export class SessionService<
         }
         return user;
       }),
-      catchError((error) => {
-        this.notifier.errors$.next({ error });
-        return of(null);
-      }),
+      catchError(() => of(null)),
     );
   }
 
