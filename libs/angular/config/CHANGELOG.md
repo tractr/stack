@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.1.14](https://github.com/tractr/stack/compare/v2.1.13...v2.1.14) (2023-04-19)
+
+
+### Bug Fixes
+
+* load the user on the application start ([f4e5ab1](https://github.com/tractr/stack/commit/f4e5ab1022f90b78c05c253a4d20f48d2c645f92))
+
+
+
 # [2.2.0-next.3](https://github.com/tractr/stack/compare/v2.2.0-next.2...v2.2.0-next.3) (2023-04-18)
 
 
