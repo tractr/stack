@@ -33,6 +33,16 @@ module.exports = {
       input: 'all',
     },
     {
+      path: 'generated/casl/src/constants/index.ts',
+      engine: 'hpf',
+      input: 'all',
+    },
+    {
+      path: 'generated/casl/src/constants/default-select-ownerships.constant.ts',
+      engine: 'hpf',
+      input: 'all',
+    },
+    {
       path: 'generated/casl/src/interfaces/index.ts',
       engine: 'hpf',
       input: 'all',

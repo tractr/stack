@@ -1,4 +1,4 @@
-export const OWNERS_DEFAULT_FIELDS = {
+export const DEFAULT_SELECT_OWNERSHIPS = {
 <<for Models model>>
   <<if model.properties.hasOwnership>>
   <<model pascal>>: {
