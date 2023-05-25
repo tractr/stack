@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.2.2](https://github.com/tractr/stack/compare/v2.2.1...v2.2.2) (2023-05-25)
+
+
+### Bug Fixes
+
+* update how we handle the composite uniqueness ([#7](https://github.com/tractr/stack/issues/7)) ([37a067c](https://github.com/tractr/stack/commit/37a067c7506a573d2343d5c641e8effa1611fa75))
+
+
+
 ## [2.2.1](https://github.com/tractr/stack/compare/v2.2.0...v2.2.1) (2023-05-16)
 
 
