@@ -1,4 +1,8 @@
-import {ContainerInternalConfig, ContainerPublicConfig, EnvironmentOrSecretValue,} from '@trxn/terraform-service-ecs';
+import {
+  ContainerInternalConfig,
+  ContainerPublicConfig,
+  EnvironmentOrSecretValue,
+} from '@trxn/terraform-service-ecs';
 
 export interface BackupContainerPublicConfig extends ContainerPublicConfig {
   environments: ContainerPublicConfig['environments'] & {

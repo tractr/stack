@@ -1,6 +1,9 @@
-import {PostgresComponentDefaultConfig} from '../interfaces';
+import { PostgresComponentDefaultConfig } from '../interfaces';
 
-import {Secret, SERVICE_COMPONENT_DEFAULT_CONFIG,} from '@trxn/terraform-service-ecs';
+import {
+  Secret,
+  SERVICE_COMPONENT_DEFAULT_CONFIG,
+} from '@trxn/terraform-service-ecs';
 
 export const POSTGRES_COMPONENT_DEFAULT_CONFIG: PostgresComponentDefaultConfig =
   {
@@ -27,7 +30,8 @@ export const POSTGRES_COMPONENT_DEFAULT_CONFIG: PostgresComponentDefaultConfig =
         VOLUMERIZE_POSTGRES_DATABASE: 'api',
         VOLUMERIZE_POSTGRES_USERNAME: Secret('POSTGRES_USER'),
         VOLUMERIZE_POSTGRES_PASSWORD: Secret('POSTGRES_PASSWORD'),
-        VOLUMERIZE_POSTGRES_HOST: (service) => service.getServiceDomainName('postgres'),
+        VOLUMERIZE_POSTGRES_HOST: (service) =>
+          service.getServiceDomainName('postgres'),
         VOLUMERIZE_POSTGRES_PORT: '5432',
       },
     },
