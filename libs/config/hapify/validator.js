@@ -159,10 +159,6 @@ oneMany entity instead.`,
 
     // Validation for 'compositeUniqueness' metadata
     if (field.meta.compositeUniqueness) {
-      if (!field.unique)
-        res.errors.push(
-          `Invalid ${field.name}: 'compositeUniqueness' metadata can only be used on unique fields`,
-        );
       if (!field.subtype === 'oneOne')
         res.errors.push(
           `Invalid ${field.name}: 'compositeUniqueness' metadata should not be used on oneOne relation as it already uses a uniqueness constraints`,
