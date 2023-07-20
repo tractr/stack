@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.2.3](https://github.com/tractr/stack/compare/v2.2.2...v2.2.3) (2023-07-20)
+
+
+### Bug Fixes
+
+* update the getEndpoints helper from the angular authentication options ([#9](https://github.com/tractr/stack/issues/9)) ([64c06d7](https://github.com/tractr/stack/commit/64c06d78da869c8088d90f9f2266242b7f8808d7))
+
+
+
 ## [2.2.2](https://github.com/tractr/stack/compare/v2.2.1...v2.2.2) (2023-05-25)
 
 
