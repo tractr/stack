@@ -8,23 +8,21 @@ export function authenticationModuleOptionsFactory(
   options: AuthenticationOptions = {},
 ): AuthenticationModuleOptions {
   const api = options.api || {};
-  const endpoints = api.endpoints || {};
   const url = api?.url || '/api';
+  const endpoints = {
+    me: '/me',
+    login: '/login',
+    logout: '/logout',
+    resetPassword: '/reset/password',
+    ...(api?.endpoints || {}),
+  };
 
   return {
     api: {
       url,
-
-      endpoints: {
-        me: endpoints.me || '/me',
-        login: endpoints.login || '/login',
-        logout: endpoints.logout || '/logout',
-
-        resetPassword: endpoints.resetPassword || '/reset/password',
-      },
-
+      endpoints,
       getEndpoint: (endpoint: AuthenticationApiEndpoints): string =>
-        `${url}/${endpoint}`,
+        `${url}/${endpoints[endpoint]}`,
     },
     user: {
       validateUser:
