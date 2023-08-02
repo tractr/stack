@@ -108,7 +108,7 @@ export async function getHapifyConfig(
       inputPath: join(
         isDirectory(hapifyPath) ? hapifyPath : dirname(hapifyPath),
         'hapify',
-        template.path,
+        template.inputPath || template.path,
       ),
       outputPath: template.path,
     }));
