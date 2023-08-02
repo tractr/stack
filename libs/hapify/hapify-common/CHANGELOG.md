@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.2.4](https://github.com/tractr/stack/compare/v2.2.3...v2.2.4) (2023-08-02)
+
+
+### Bug Fixes
+
+* make the inputPath in the hapify templates configuration works ([b0edee7](https://github.com/tractr/stack/commit/b0edee78c47062f45883052d20c15bc8e3f9936f))
+
+
+
 ## [2.2.3](https://github.com/tractr/stack/compare/v2.2.2...v2.2.3) (2023-07-20)
 
 
