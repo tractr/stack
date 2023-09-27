@@ -6,11 +6,7 @@
 
 <<# For each model form hapify we convert it to a prism model >>
   model <<model pascal>> {
-
-    <<if model.meta.schema>>
-    @@schema("<<=model.meta.schema.raw>>")
-    <<endif>>
-
+    <<=getSchema(model)>>
 <<# For each field in the model we generate the prisma schema >>
     <<for model.fields not manyOne field>>
 
@@ -66,14 +62,18 @@
   <<for model.fields enum field>>
 enum <<model pascal>><<field pascal>> {
    <<for field.enum enumValue>>
- <<enumValue raw>>
+  <<enumValue raw>>
    <<endfor>>
-    <<if model.meta.schema>>
-    @@schema("<<=model.meta.schema.raw>>")
-    <<endif>>
+  <<=getSchema(model)>>
 }
   <<endfor>>
 <<endfor>>
+
+<<<
+function getSchema(model) {
+  return model.meta?.schema ? '@@schema("' + model.meta.schema.raw + '")' : '';
+}
+>>>
 
 <<<
 function getReferencedEntityPrimary(f) {
