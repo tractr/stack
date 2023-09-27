@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.2.5](https://github.com/tractr/stack/compare/v2.2.4...v2.2.5) (2023-09-27)
+
+
+### Bug Fixes
+
+* update the schema decorator of the prisma generator to allow empty metadata model ([11b23f2](https://github.com/tractr/stack/commit/11b23f2854a298b6a02b4b7f3dd085ebe0b1ebea))
+
+
+### Features
+
+* add schema decorators to prisma generate ([41252a3](https://github.com/tractr/stack/commit/41252a33271f89b0d0960d53098958cec2895978))
+
+
+
 ## [2.2.4](https://github.com/tractr/stack/compare/v2.2.3...v2.2.4) (2023-08-02)
 
 
